@@ -1,0 +1,36 @@
+class HelloWorld
+{
+    static void Main()
+    {
+        Console.Write("Введите количество пар: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        for (int i = 0; i < n; i++) 
+        {
+            Console.Write("Введите первый член пары: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите второй член пары: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            if(a>=b & a % 3 == 0) 
+            {
+                Console.WriteLine("Ответ: "+a);
+            }
+            if(a>=b & a % 3 != 0 & b % 3 == 0) 
+            {
+                Console.WriteLine("Ответ: "+b);
+            }
+            if(b>a & b % 3 == 0) 
+            {
+                Console.WriteLine("Ответ: "+b); 
+            }
+            if(b>a & b % 3 != 0 & a % 3 == 0) 
+            {
+                Console.WriteLine("Ответ: "+a); 
+            }
+            if(b % 3 != 0 & a % 3 != 0)
+            {
+                Console.WriteLine("Нет элемента кратного трём");
+            }
+
+        }
+    }
+}
